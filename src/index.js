@@ -5,6 +5,7 @@ import './index.css'
 import App from './App'
 import NotFound from './routes/notFound'
 import Movies from './routes/movies'
+import Movie from './routes/movie'
 import Search from './routes/search'
 import reportWebVitals from './reportWebVitals'
 
@@ -14,8 +15,10 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="/movies" element={<Movies />} />
-          <Route path="/search" element={<Search />} />
+          <Route path="movies" element={<Movies />} >
+            <Route path=":movideId" element={<Movie />} />
+          </Route>
+          <Route path="search" element={<Search />} />
         </Route>
         <Route path="*" element={<NotFound kind="Section" />} />
       </Routes>
