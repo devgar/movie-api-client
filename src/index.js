@@ -1,13 +1,24 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App'
+import Movies from './routes/movies'
+import Search from './routes/search'
 import reportWebVitals from './reportWebVitals'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/search" element={<Search />} />
+        </Route>
+        <Route path="*" element={<div>404</div>} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 )
 
