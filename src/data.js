@@ -3,3 +3,7 @@ const movies = [{ "adult": false, "backdrop_path": "/p1F51Lvj3sMopG948F5HsBbl43C
 export function getPopularMovies () {
 	return movies.slice(0, 10)
 }
+
+export function getMovie (movieId) {
+	return movies.find(movie => movie.id === parseInt(movieId))
+}
