@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router-dom'
 
-import SearchBox from '../components/Tempo'
+import SearchBox from '../components/SearchBox'
 
 export default function Search () {
 	const [searchParams] = useSearchParams()
