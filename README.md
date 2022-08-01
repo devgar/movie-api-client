@@ -1,5 +1,7 @@
 # MOVIE API CLIENT
 
+> Disponible en [Castellano](./README.es.md)
+
 This project is a client for [The Movie DB](https://https://www.themoviedb.org/) developed using [react](https://reactjs.org/) as a final project for geekshubsacademy react bootcamp.
 
 ## Requirements
