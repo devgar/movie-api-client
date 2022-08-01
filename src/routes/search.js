@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router-dom'
 
-import SearchBox from '../components/searchBox'
+import SearchBox from '../components/SearchBox'
 
 export default function Search () {
 	const [searchParams] = useSearchParams()
@@ -8,7 +8,7 @@ export default function Search () {
 		<section className="column">
 			<SearchBox />
 			<p>
-			Your search query is: {searchParams.get('q')}
+			Your search query is: {searchParams.get('query')}
 			</p>
 		</section>
 	)

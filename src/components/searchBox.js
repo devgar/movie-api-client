@@ -6,13 +6,13 @@ export default function SearchBox () {
 	function onSubmit(e) {
 		e.preventDefault()
 		const params = {}
-		if (e.target.q.value) params.q = e.target.q.value
+		if (e.target.query.value) params.query = e.target.query.value
 		setSearchParams(params)
 	}
 
 	return (
 		<form onSubmit={onSubmit} className="search-box">
-			<input name='q' type="text" placeholder="Movie title" />
+			<input name='query' type="text" placeholder="Movie title" />
 			<input type="submit" value="Search" />
 		</form>
 	)
