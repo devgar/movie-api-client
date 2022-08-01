@@ -7,6 +7,9 @@ import NotFound from './routes/notFound'
 import Movies from './routes/movies'
 import Movie from './routes/movie'
 import Search from './routes/search'
+
+import logo from './logo.svg'
+
 import reportWebVitals from './reportWebVitals'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
@@ -15,6 +18,14 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
+          <Route
+            index
+            element={
+              <main style={{ padding: "4rem 0", backgroundColor: "#282c34" }}>
+                <img src={logo} className="App-logo" alt="logo de The Movie DB" />
+              </main>
+            }
+          />
           <Route path="movies" element={<Movies />} >
             <Route path=":movieId" element={<Movie />} />
           </Route>
