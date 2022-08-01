@@ -27,7 +27,7 @@ export default function Movie() {
 			<h1 style={{ height: '3rem' }}>{movie.title}</h1>
 			<h2 style={{ color: 'grey', height: '2.4rem' }}>{movie.original_title}</h2>
 			<div>
-				{movie.genres.map(genre => <i style={{marginLeft: '.2rem'}}>{genre.name}</i>)}
+				{movie.genres.map(genre => <i key={genre.name} style={{marginLeft: '.2rem'}}>{genre.name}</i>)}
 			</div>
 			<p style={{ padding: '1rem'}}>{movie.overview}</p>
 		</main>
