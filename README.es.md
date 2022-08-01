@@ -42,3 +42,9 @@ La build se minimiza y los archivos pasan a incluir los hashes.\
 ¡Tu aplicación está lista para ser desplegada!
 
 Consulta la sección [despliegue](https://facebook.github.io/create-react-app/docs/deployment) para más información.
+
+## Capturas
+
+![Vista principal del proyecto](public/ScreenShot_Index.png "Home page")
+![Cuadro de búsqueda con resultados](public/ScreenShot_Search.png "Búsqueda")
+![Detalles del resultado de búsqueda elegido](public/ScreenShot_SearchResult.png "Detalles de resultado de búsqueda")
