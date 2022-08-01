@@ -1,5 +1,7 @@
-import { Link, Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+
+import MovieList from '../components/MovieList'
 
 import { getTopTenPopularMovies } from "../services/movies"
 
@@ -10,23 +12,7 @@ export default function Movies() {
   }, [])
 	return (
 		<section style={{ display: "flex" }}>
-      <nav
-        style={{
-          borderRight: "solid 1px",
-          padding: "1rem",
-					flexGrow: 1,
-        }}
-      >
-        {movies.map((movie) => (
-          <Link
-            style={{ display: "block", margin: "1rem 0" }}
-            to={`/movies/${movie.id}`}
-            key={movie.id}
-          >
-            {movie.title}
-          </Link>
-        ))}
-      </nav>
+      { movies.length ? <MovieList movies={movies} /> : <h1>Empty</h1> }
 			<Outlet />
     </section>
 	)
