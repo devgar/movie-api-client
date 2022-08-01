@@ -29,7 +29,9 @@ root.render(
           <Route path="movies" element={<Movies />} >
             <Route path=":movieId" element={<Movie />} />
           </Route>
-          <Route path="search" element={<Search />} />
+          <Route path="search" element={<Search />} >
+            <Route path="movies/:movieId" element={<Movie />} />
+          </Route>
         </Route>
         <Route path="*" element={<NotFound kind="Section" />} />
       </Routes>
