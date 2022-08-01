@@ -1,4 +1,4 @@
-import API from '../API'
+import API from './API'
 
 export async function searchMovie (query, amount = 10, page = 1) {
 	const response = await API('/search/movie', { query, page })

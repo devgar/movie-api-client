@@ -1,9 +1,13 @@
 import { Link, Outlet } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
-import { getPopularMovies } from "../data"
+import { getTopTenPopularMovies } from "../services/movies"
 
 export default function Movies() {
-	let movies = getPopularMovies()
+  let [movies, setMovies] = useState([])
+  useEffect(() => {
+    getTopTenPopularMovies().then(movies => setMovies(movies))
+  }, [])
 	return (
 		<section style={{ display: "flex" }}>
       <nav
