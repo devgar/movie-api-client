@@ -42,11 +42,20 @@
 }
 
 
-main {
+main, section {
   padding: 1rem 0;
   box-sizing: border-box;
   background: white;
   min-height: 50vh;
+}
+
+section {
+  width: max(100vw - 4rem, 480px);
+  margin: auto;
+}
+
+main {
+  width: 100%;
 }
 
 @keyframes App-logo-spin {
