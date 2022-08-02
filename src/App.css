@@ -50,8 +50,13 @@ main, section {
 }
 
 section {
+  display: flex;
   width: max(100vw - 4rem, 480px);
   margin: auto;
+}
+
+section.column {
+  flex-direction: column;
 }
 
 main {
